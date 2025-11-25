@@ -2,10 +2,13 @@ import React, { useEffect } from "react";
 import { auth, db } from "./firebase";   // Importamos tu firebase.js
 import { onAuthStateChanged } from "firebase/auth";
 import { collection, getDocs } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
-function App() {
 
+export default function App() {
+ const navigate = useNavigate();
   useEffect(() => {
+    
     console.log("Firebase cargado correctamente:", auth, db);
 
     // Prueba de AUTH (no inicia sesión, solo verifica funcionamiento)
@@ -28,11 +31,14 @@ function App() {
   }, []);
 
   return (
+    <div>
     <h1>Probando Firebase… revisa la consola del navegador</h1>
+    <button onClick={() =>navigate('/Page')}>Iniciar Sesion</button>
+  </div>
   );
 }
 
-export default App;
+
 
 
 //solo queda subir al feature de github
