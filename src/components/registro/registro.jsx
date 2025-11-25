@@ -18,17 +18,19 @@ export default function Registro() {
      
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-
+        alert("Usuario registrado correctamente!");
+      setName("");
+      setEmail("");
+      setPassword("");
       await setDoc(doc(db, "usuarios", user.uid), {
         nombre: name,
         email: email,
         creado: new Date()
+        
+    
       });
-
-      alert("Usuario registrado correctamente!");
-      setName("");
-      setEmail("");
-      setPassword("");
+      
+      
     } catch (err) {
       setError(err.message);
     }
