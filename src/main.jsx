@@ -7,6 +7,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Dashboard from "./components/dashboard/dashboard.jsx"
 import Registro from './components/registro/registro.jsx'
 import RecuperarPassword from './components/recuperarPassword/recuperarPassword.jsx'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
