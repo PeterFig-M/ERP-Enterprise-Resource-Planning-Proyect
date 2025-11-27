@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { auth } from "../../firebase";
 import { sendPasswordResetEmail } from "firebase/auth";
-
+import { useNavigate } from "react-router-dom";
 export default function RecuperarPassword() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
-
+  const navigate= useNavigate();
   const resetearPassword = async (e) => {
     e.preventDefault();
     setMessage("");
@@ -41,6 +41,9 @@ export default function RecuperarPassword() {
       </form>
       {message && <p style={{ color: "green" }}>{message}</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
+
+    <button type="btn-primary" onClick={()=>navigate('/Page')}>Regresar</button>
+
     </div>
   );
 }
