@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon personalizado -->
+    <link rel="icon" type="image/jpg" href="/assests/logo-tecnofix.jpg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Dashboard ERP - Gestión de clientes, productos y cotizaciones" />
+    <meta name="author" content="Equipo ERP" />
+
+    <title>ERP Dashboard</title>
+
+    <!-- Estilos básicos para el body -->
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(135deg, #004080, #00aaff);
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #root {
+        width: 100%;
+        max-width: 1200px;
+        background: #fff;
+        color: #333;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="main.tsx"></script>
+  </body>
+</html>
